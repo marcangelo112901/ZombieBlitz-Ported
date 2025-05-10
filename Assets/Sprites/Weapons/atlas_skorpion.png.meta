@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_skorpion_0: -1137576954550474648
+      atlas_skorpion_1: 8960045230221905153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

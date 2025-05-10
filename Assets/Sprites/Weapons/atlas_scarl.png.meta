@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_scarl_0: -6325288075922667104
+      atlas_scarl_1: 2624680822843766722
+      atlas_scarl_2: -3173885703315074764
+      atlas_scarl_3: -1996331642308736332
+      atlas_scarl_4: 3989835989801105140
+      atlas_scarl_5: -1228399356224960394
+      atlas_scarl_6: -2758374303567596736
+      atlas_scarl_7: -3295442706777933386
+      atlas_scarl_8: 508663892125094997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

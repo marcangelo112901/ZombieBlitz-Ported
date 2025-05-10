@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_aughbar_0: 2757169586504285957
+      atlas_aughbar_1: 3093143234426366793
+      atlas_aughbar_2: 3789170756916702460
+      atlas_aughbar_3: -5377551439718780750
+      atlas_aughbar_4: 832937197837618572
+      atlas_aughbar_5: 7058364495726726519
+      atlas_aughbar_6: 8377020177032998636
+      atlas_aughbar_7: -1695762847907583464
+      atlas_aughbar_8: -5243660204167787952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

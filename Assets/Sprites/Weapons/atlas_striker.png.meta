@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_striker_0: -5853641185537111970
+      atlas_striker_1: 3516503427226768904
+      atlas_striker_2: -8532055409366181325
+      atlas_striker_3: -5366521665775356775
+      atlas_striker_4: 8214229196910173499
+      atlas_striker_5: 2327452024430966350
+      atlas_striker_6: 113739564039937442
+      atlas_striker_7: 6644860621244390460
+      atlas_striker_8: 3809628037714870882
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

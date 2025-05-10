@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_galil52_0: 3800624776839908673
+      atlas_galil52_1: 7520629307502628528
+      atlas_galil52_2: 3747462387633905922
+      atlas_galil52_3: 2268813602494690353
+      atlas_galil52_4: 8139095927035674652
+      atlas_galil52_5: 8018663149818911805
+      atlas_galil52_6: -7674949594798568273
+      atlas_galil52_7: 5517560072456653961
+      atlas_galil52_8: 4576196814416928053
+      atlas_galil52_9: 5963922585782441729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

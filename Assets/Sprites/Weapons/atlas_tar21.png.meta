@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_tar21_0: -7082424831511438851
+      atlas_tar21_1: 4992041030126718971
+      atlas_tar21_2: 5713167059579335535
+      atlas_tar21_3: -5339184185600780889
+      atlas_tar21_4: -120431939380497065
+      atlas_tar21_5: -1189913790875610291
+      atlas_tar21_6: -6903703815034706745
+      atlas_tar21_7: 7992134229751161884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

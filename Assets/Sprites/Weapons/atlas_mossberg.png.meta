@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_mossberg_0: 3780602272125438310
+      atlas_mossberg_1: -7117327910580162670
+      atlas_mossberg_2: -3067508823769886723
+      atlas_mossberg_3: -6045838198260438478
+      atlas_mossberg_4: -2702183134908470031
+      atlas_mossberg_5: -557544504373868117
+      atlas_mossberg_6: 8819504275456898898
+      atlas_mossberg_7: -5668839125633253835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

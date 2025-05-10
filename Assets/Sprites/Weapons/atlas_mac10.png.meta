@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_mac10_0: 5712459467986482943
+      atlas_mac10_1: -5117744197310081632
+      atlas_mac10_2: -5201305705083121961
+      atlas_mac10_3: 4374135013501832912
+      atlas_mac10_4: 7515081607384431452
+      atlas_mac10_5: 6926524325706310515
+      atlas_mac10_6: -8298279369689742706
+      atlas_mac10_7: 1637500799298047877
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

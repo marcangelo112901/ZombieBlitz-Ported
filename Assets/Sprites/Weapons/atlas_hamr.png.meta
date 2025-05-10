@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_hamr_0: 5233275072055914332
+      atlas_hamr_1: -171851740200954614
+      atlas_hamr_2: -8986814396037050812
+      atlas_hamr_3: -3245060023726441174
+      atlas_hamr_4: -1989147328054851471
+      atlas_hamr_5: 1345098479569124463
+      atlas_hamr_6: -8079257901105637413
+      atlas_hamr_7: -3589911910053977469
+      atlas_hamr_8: -2904397361182566980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

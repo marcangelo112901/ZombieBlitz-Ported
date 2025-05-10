@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_benelli_m3_0: 8427477007969716826
+      atlas_benelli_m3_1: 7957118493380836994
+      atlas_benelli_m3_2: -2894416144346647777
+      atlas_benelli_m3_3: -8280804133781059659
+      atlas_benelli_m3_4: -6607088858983471829
+      atlas_benelli_m3_5: 6865212038592307810
+      atlas_benelli_m3_6: 7986337510662693899
+      atlas_benelli_m3_7: 5276883508537815977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

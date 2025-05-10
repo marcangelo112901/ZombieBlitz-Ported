@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_rhino_0: 1868703231961162615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

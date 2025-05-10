@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_tridant_0: -6218425757116666872
+      atlas_tridant_1: 5739469982445289689
+      atlas_tridant_2: 5688640520321150248
+      atlas_tridant_3: -351087882400929169
+      atlas_tridant_4: 8168418965504798892
+      atlas_tridant_5: 1154518649451094865
+      atlas_tridant_6: -4609826303431024288
+      atlas_tridant_7: 1641751628255479614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

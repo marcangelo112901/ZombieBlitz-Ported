@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_qbb95_0: 425622483156628523
+      atlas_qbb95_1: 6686224870532923011
+      atlas_qbb95_2: 4384603300955820460
+      atlas_qbb95_3: -1082843449011835861
+      atlas_qbb95_4: -2507390152472043931
+      atlas_qbb95_5: -5265759711742511341
+      atlas_qbb95_6: -5149621838758720182
+      atlas_qbb95_7: 2723289410924563858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_xm25_0: -8641974072982381943
+      atlas_xm25_1: 3737722365255946670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

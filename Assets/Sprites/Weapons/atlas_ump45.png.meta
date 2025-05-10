@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_ump45_0: -2587348698972953825
+      atlas_ump45_1: 4946459157375837509
+      atlas_ump45_2: 339967915517798721
+      atlas_ump45_3: 7698167921359306024
+      atlas_ump45_4: 1956580971188778952
+      atlas_ump45_5: -475329894455604439
+      atlas_ump45_6: 6726334934345947887
+      atlas_ump45_7: 3541457081643741874
+      atlas_ump45_8: 2943115077402770571
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

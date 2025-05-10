@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_vsk_0: 7926327398003427181
+      atlas_vsk_1: 4384564907880699432
+      atlas_vsk_2: -3584805369288309040
+      atlas_vsk_3: 2190264118250157605
+      atlas_vsk_4: 1997034128936765530
+      atlas_vsk_5: 5328040381023189621
+      atlas_vsk_6: -2046274122161858441
+      atlas_vsk_7: -5063246539173632612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

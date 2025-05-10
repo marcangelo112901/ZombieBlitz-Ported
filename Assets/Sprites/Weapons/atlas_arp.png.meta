@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_arp_0: 6768503838348703077
+      atlas_arp_1: 5504998144845890228
+      atlas_arp_2: 4767807946634023314
+      atlas_arp_3: 1636131471347290347
+      atlas_arp_4: 2484417240285919371
+      atlas_arp_5: 6180269135297056276
+      atlas_arp_6: 2933723475692343912
+      atlas_arp_7: 4427487568932177974
+      atlas_arp_8: 2073427094427077946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_jackhammer_0: 7697275278698620058
+      atlas_jackhammer_1: 2727951062993719425
+      atlas_jackhammer_2: 9047635401195830123
+      atlas_jackhammer_3: 5734957074681519325
+      atlas_jackhammer_4: -953696450218100025
+      atlas_jackhammer_5: 9071771884872200856
+      atlas_jackhammer_6: 1556247413850946604
+      atlas_jackhammer_7: -5307339942563351610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

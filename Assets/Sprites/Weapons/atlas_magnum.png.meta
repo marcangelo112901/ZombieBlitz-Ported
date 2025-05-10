@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_magnum_0: -5279503457063944448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

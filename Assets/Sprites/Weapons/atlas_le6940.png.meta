@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_le6940_0: 8003421423686178212
+      atlas_le6940_1: 2510667611200912763
+      atlas_le6940_2: 3976076399422873097
+      atlas_le6940_3: 5584996531085925189
+      atlas_le6940_4: 2245403320815373851
+      atlas_le6940_5: -6212633897964383336
+      atlas_le6940_6: -4481701495611553519
+      atlas_le6940_7: -4156950873910302549
+      atlas_le6940_8: -5391012087687164423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

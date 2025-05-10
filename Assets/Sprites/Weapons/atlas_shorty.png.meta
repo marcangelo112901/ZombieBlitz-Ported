@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_shorty_0: 7506323369657594073
+      atlas_shorty_1: -1890830756361450238
+      atlas_shorty_2: 8678226880826454930
+      atlas_shorty_3: 3521351614830548361
+      atlas_shorty_4: -4052862510318682299
+      atlas_shorty_5: 4488677837500019524
+      atlas_shorty_6: -8003351232166392956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

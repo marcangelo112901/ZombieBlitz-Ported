@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_g36c_0: 612750341053250109
+      atlas_g36c_1: 4010881768481317608
+      atlas_g36c_2: -4948188480886271068
+      atlas_g36c_3: 8937476090975973367
+      atlas_g36c_4: 7655032424552200437
+      atlas_g36c_5: -4883842136339024244
+      atlas_g36c_6: -2938391789112204589
+      atlas_g36c_7: -6367019224757190347
+      atlas_g36c_8: -5922907603322684438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

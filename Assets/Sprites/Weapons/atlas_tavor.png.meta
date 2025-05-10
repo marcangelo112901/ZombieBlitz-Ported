@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_tavor_0: 3777007059563246155
+      atlas_tavor_1: 4761352021209654397
+      atlas_tavor_2: 3504308918123563199
+      atlas_tavor_3: 4573580625292718426
+      atlas_tavor_4: -2697738754319029476
+      atlas_tavor_5: -90760908207613495
+      atlas_tavor_6: 4433695338030760321
+      atlas_tavor_7: -2850887891616481181
+      atlas_tavor_8: -1966445112965577113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

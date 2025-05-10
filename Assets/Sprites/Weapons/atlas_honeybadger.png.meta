@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_honeybadger_0: 4591800604110938420
+      atlas_honeybadger_1: -771282652594996412
+      atlas_honeybadger_2: -8864249038227284300
+      atlas_honeybadger_3: 3147878372849903451
+      atlas_honeybadger_4: -1776709468586409443
+      atlas_honeybadger_5: -6904566626102888744
+      atlas_honeybadger_6: 4622683348085206280
+      atlas_honeybadger_7: -1309644227481027506
+      atlas_honeybadger_8: 6829465311670486052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_deagle_0: 9081168489418747313
+      atlas_deagle_1: -5234846164506168690
+      atlas_deagle_2: -2377786245889462173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

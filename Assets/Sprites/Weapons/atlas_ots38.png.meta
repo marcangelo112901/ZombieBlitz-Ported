@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_ots38_0: 8975502277936800790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

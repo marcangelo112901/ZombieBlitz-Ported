@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_saiga_0: 379313338603495489
+      atlas_saiga_1: 5774980883694750822
+      atlas_saiga_2: 7075998566823444413
+      atlas_saiga_3: 128721486492983611
+      atlas_saiga_4: -8469077633941641873
+      atlas_saiga_5: 3206863027876844848
+      atlas_saiga_6: 8393933448691106051
+      atlas_saiga_7: -8534520694115849558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
