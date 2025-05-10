@@ -1,0 +1,762 @@
+fileFormatVersion: 2
+guid: 0a9743d9520a14c4bbc0bb68bfecc09e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9181174795529758274
+    second: atlas_effects_0
+  - first:
+      213: -8445465171351281562
+    second: atlas_effects_1
+  - first:
+      213: -5926421938539778454
+    second: atlas_effects_2
+  - first:
+      213: 6649553730554607747
+    second: atlas_effects_3
+  - first:
+      213: -2821144627689855396
+    second: atlas_effects_4
+  - first:
+      213: -5459099583182858005
+    second: atlas_effects_5
+  - first:
+      213: 1553766290018373781
+    second: atlas_effects_6
+  - first:
+      213: -7178770107714915587
+    second: atlas_effects_7
+  - first:
+      213: 3242678715736300693
+    second: atlas_effects_8
+  - first:
+      213: 3544637531903373618
+    second: atlas_effects_9
+  - first:
+      213: -2575265900137276978
+    second: atlas_effects_10
+  - first:
+      213: 6785729437595027739
+    second: atlas_effects_11
+  - first:
+      213: -6923962202871446394
+    second: atlas_effects_12
+  - first:
+      213: 508907907625822979
+    second: atlas_effects_13
+  - first:
+      213: -4451852854933095177
+    second: atlas_effects_14
+  - first:
+      213: 7659484161582835558
+    second: atlas_effects_15
+  - first:
+      213: -8016004208670997628
+    second: atlas_effects_16
+  - first:
+      213: -1783206201934141933
+    second: atlas_effects_17
+  - first:
+      213: -597401169133779505
+    second: atlas_effects_18
+  - first:
+      213: -2476230993414973383
+    second: atlas_effects_19
+  - first:
+      213: -2585956699632297730
+    second: atlas_effects_20
+  - first:
+      213: -5669455006815729492
+    second: atlas_effects_21
+  - first:
+      213: -4436462165120750582
+    second: atlas_effects_22
+  - first:
+      213: -1674054051547391229
+    second: atlas_effects_23
+  - first:
+      213: 688724670440114226
+    second: atlas_effects_24
+  - first:
+      213: 8282926292264269924
+    second: atlas_effects_25
+  - first:
+      213: -7271931211119488895
+    second: atlas_effects_26
+  - first:
+      213: -2283017800476207285
+    second: atlas_effects_27
+  - first:
+      213: 5159764616319863018
+    second: atlas_effects_28
+  - first:
+      213: -5946587349150971730
+    second: atlas_effects_29
+  - first:
+      213: 5978537155624603063
+    second: atlas_effects_30
+  - first:
+      213: -6367273243332646376
+    second: atlas_effects_31
+  - first:
+      213: 8892399768991941012
+    second: atlas_effects_32
+  - first:
+      213: -1292655984674057110
+    second: atlas_effects_33
+  - first:
+      213: 4972226353907220498
+    second: atlas_effects_34
+  - first:
+      213: -6781379714219603020
+    second: atlas_effects_35
+  - first:
+      213: -7146365515213497017
+    second: atlas_effects_36
+  - first:
+      213: -9068643899470399813
+    second: atlas_effects_37
+  - first:
+      213: -736461883155871831
+    second: atlas_effects_38
+  - first:
+      213: -8849865955628189317
+    second: atlas_effects_39
+  - first:
+      213: 8936218852191735848
+    second: atlas_effects_40
+  - first:
+      213: -8612331636882763177
+    second: atlas_effects_41
+  - first:
+      213: 4152658698692290164
+    second: atlas_effects_42
+  - first:
+      213: -3848495121130645364
+    second: atlas_effects_43
+  - first:
+      213: -542203752408744733
+    second: atlas_effects_44
+  - first:
+      213: 5622097169155931469
+    second: atlas_effects_45
+  - first:
+      213: 5716936788830406420
+    second: atlas_effects_46
+  - first:
+      213: -6823895690890459158
+    second: atlas_effects_47
+  - first:
+      213: 6319147587020272134
+    second: atlas_effects_48
+  - first:
+      213: 8728711548530657612
+    second: atlas_effects_49
+  - first:
+      213: 869773686622871616
+    second: atlas_effects_50
+  - first:
+      213: -4967966881262728600
+    second: atlas_effects_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: atlas_effects_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 388
+        width: 101
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246225425d51a6f70800000000000000
+      internalID: 9181174795529758274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_1
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 358
+        width: 95
+        height: 77
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca840b895bc0251b0800000000000000
+      internalID: -5669455006815729492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_effects_22
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 427
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c648c8a258e62c0800000000000000
+      internalID: -4436462165120750582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_effects_23
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 393
+        width: 176
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30bd6baa5b094c8e0800000000000000
+      internalID: -1674054051547391229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_0
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 345
+        width: 78
+        height: 80
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23881a15077de8900800000000000000
+      internalID: 688724670440114226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 254
+        width: 57
+        height: 81
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd8a7d0ed708f250800000000000000
+      internalID: 5978537155624603063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 255
+        width: 55
+        height: 80
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81aee4f68b6e2a7a0800000000000000
+      internalID: -6367273243332646376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 262
+        width: 88
+        height: 53
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d199e4d6203dc90800000000000000
+      internalID: -7146365515213497017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_6
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 242
+        width: 89
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820990033b3d30c70800000000000000
+      internalID: 8936218852191735848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 209
+        width: 85
+        height: 46
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 417499548b3a65f40800000000000000
+      internalID: 5716936788830406420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_7
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 207
+        width: 89
+        height: 46
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49050d18ec922970800000000000000
+      internalID: 8728711548530657612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flash_8
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 210
+        width: 75
+        height: 42
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040632a4f8e021c00800000000000000
+      internalID: 869773686622871616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_effects_51
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 191
+        width: 164
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a0e62617c3e0bb0800000000000000
+      internalID: -4967966881262728600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_0
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 438
+        width: 120
+        height: 67
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157a363b6cfa4514b8e7a961b5ec98ba
+      internalID: -1974698529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 442
+        width: 108
+        height: 49
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4cbf4be4dee5849a9efde40f59b3da
+      internalID: 177014818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 322
+        width: 89
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0.656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673bee427a46bcd49b4ddb982df852fe
+      internalID: -278102690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 345
+        width: 117
+        height: 34
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0a270cafff4414f985d1838b10892f
+      internalID: -689226253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 295
+        width: 87
+        height: 42
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ae0f157092d184f830fdbbee5a8517
+      internalID: 1069131297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparks_5
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 216
+        width: 75
+        height: 27
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4189e365e741f6e4ea1da3026c9c3f06
+      internalID: -584307926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 168874b7709e4574ea2cc5eaa0169500
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      atlas_effects_0: 9181174795529758274
+      atlas_effects_1: -8445465171351281562
+      atlas_effects_10: -2575265900137276978
+      atlas_effects_11: 6785729437595027739
+      atlas_effects_12: -6923962202871446394
+      atlas_effects_13: 508907907625822979
+      atlas_effects_14: -4451852854933095177
+      atlas_effects_15: 7659484161582835558
+      atlas_effects_16: -8016004208670997628
+      atlas_effects_17: -1783206201934141933
+      atlas_effects_18: -597401169133779505
+      atlas_effects_19: -2476230993414973383
+      atlas_effects_2: -5926421938539778454
+      atlas_effects_20: -2585956699632297730
+      atlas_effects_22: -4436462165120750582
+      atlas_effects_23: -1674054051547391229
+      atlas_effects_25: 8282926292264269924
+      atlas_effects_26: -7271931211119488895
+      atlas_effects_27: -2283017800476207285
+      atlas_effects_28: 5159764616319863018
+      atlas_effects_29: -5946587349150971730
+      atlas_effects_3: 6649553730554607747
+      atlas_effects_30: -1307816487
+      atlas_effects_32: 8892399768991941012
+      atlas_effects_33: -1292655984674057110
+      atlas_effects_34: 4972226353907220498
+      atlas_effects_35: -6781379714219603020
+      atlas_effects_36: -539024873
+      atlas_effects_37: -9068643899470399813
+      atlas_effects_38: -736461883155871831
+      atlas_effects_39: -8849865955628189317
+      atlas_effects_4: -2821144627689855396
+      atlas_effects_41: -8612331636882763177
+      atlas_effects_42: 4152658698692290164
+      atlas_effects_43: -3848495121130645364
+      atlas_effects_44: -542203752408744733
+      atlas_effects_45: 5622097169155931469
+      atlas_effects_47: -6823895690890459158
+      atlas_effects_48: 6319147587020272134
+      atlas_effects_5: -5459099583182858005
+      atlas_effects_51: -4967966881262728600
+      atlas_effects_8: 3242678715736300693
+      atlas_effects_9: 3544637531903373618
+      flash_0: 688724670440114226
+      flash_1: -5669455006815729492
+      flash_2: -7146365515213497017
+      flash_3: 5716936788830406420
+      flash_4: 5978537155624603063
+      flash_5: -6367273243332646376
+      flash_6: 8936218852191735848
+      flash_7: 8728711548530657612
+      flash_8: 869773686622871616
+      sparks_0: 1553766290018373781
+      sparks_1: -7178770107714915587
+      sparks_2: -278102690
+      sparks_3: -689226253
+      sparks_4: 1069131297
+      sparks_5: -584307926
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
