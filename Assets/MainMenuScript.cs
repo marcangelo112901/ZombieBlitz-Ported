@@ -9,6 +9,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Netcode.Transports.UTP;
+using Unity.VisualScripting;
 
 public class MainMenuScript : NetworkBehaviour
 {
@@ -134,7 +135,7 @@ public class MainMenuScript : NetworkBehaviour
 
         Lobby.SetActive(true);
         EnterIPUI.SetActive(false);
-        SendPlayerNameServerRpc(playerNameIF.text);
+        SendPlayerNameServerRpc(OwnerClientId, playerNameIF.text);
     }
 
     public void CloseLobby()
@@ -179,32 +180,42 @@ public class MainMenuScript : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void SendPlayerNameServerRpc(string playerName, ServerRpcParams rpcParams = default)
+    private void SendPlayerNameServerRpc(ulong clientID, string playerName, ServerRpcParams rpcParams = default)
     {
         ulong senderId = rpcParams.Receive.SenderClientId;
         if (!PlayerDataScript.Instance.playerDictionary.ContainsKey(senderId))
             PlayerDataScript.Instance.playerDictionary.Add(senderId, playerName);
 
-        string jsonPlayerNames = JsonConvert.SerializeObject(PlayerDataScript.Instance.playerDictionary.Values);
+        PlayerData data = new PlayerData();
+        data.cliendId = PlayerDataScript.Instance.playerDictionary.Keys.ToArray();
+        data.playerName = PlayerDataScript.Instance.playerDictionary.Values.ToArray();
+
+        string jsonPlayerNames = JsonConvert.SerializeObject(data);
         UpdateClientListClientRpc(jsonPlayerNames);
     }
 
     [ClientRpc]
     private void UpdateClientListClientRpc(string jsonPlayerNames)
     {
-        List<string> playerNames = JsonConvert.DeserializeObject<List<string>>(jsonPlayerNames);
+        PlayerData playerNames = JsonConvert.DeserializeObject<PlayerData>(jsonPlayerNames);
+        PlayerDataScript.Instance.playerDictionary.Clear();
 
         foreach (Transform child in PlayerList)
         {
             Destroy(child.gameObject);
         }
 
-        for (int i = 0; i < playerNames.Count; i++)
+        for (int i = 0; i < playerNames.cliendId.Length; i++)
         {
+            if (IsClient)
+            {
+                PlayerDataScript.Instance.playerDictionary.Add(playerNames.cliendId[i], playerNames.playerName[i]);
+            }
+
             GameObject playerData = Instantiate(this.playerDataPrefab, PlayerList);
             if (playerData.transform.GetChild(0).TryGetComponent(out TextMeshProUGUI textTMP))
             {
-                textTMP.text = "Player " + (i + 1) + ": " + playerNames[i];
+                textTMP.text = "Player " + (i + 1) + ": " + playerNames.playerName[i];
             }
         }
     }
@@ -226,4 +237,11 @@ public class MainMenuScript : NetworkBehaviour
     {
         Application.Quit();
     }
+}
+
+[System.Serializable]
+public class PlayerData
+{
+    public ulong[] cliendId;
+    public string[] playerName;
 }

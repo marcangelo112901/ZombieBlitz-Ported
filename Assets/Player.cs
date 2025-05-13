@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -36,6 +37,8 @@ public class Player : NetworkBehaviour
     [SerializeField] private AudioClip replenishAmmoSound;
     [SerializeField] private AudioClip equipSound;
     [SerializeField] private AudioClip[] reloadSounds;
+    [SerializeField] private TextMeshProUGUI playerNameTMP;
+
     [HideInInspector]
     public NetworkVariable<bool> UIOpened = new NetworkVariable<bool>(
         false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
@@ -60,9 +63,14 @@ public class Player : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        Debug.Log(SystemScript.Instance);
         weapons[0] = SystemScript.Instance.GetClonedWeaponByName(weapons[0].weaponName);
         SystemScript.Instance.players.Add(gameObject);
+
+        if (PlayerDataScript.Instance.playerDictionary.TryGetValue(OwnerClientId, out string playerName))
+            playerNameTMP.text = playerName;
+        else
+            playerNameTMP.text = "";
+
         if (IsServer)
             currentHP.Value = maxHP;
 
@@ -78,6 +86,8 @@ public class Player : NetworkBehaviour
         SystemScript.player = this;
 
         cameraScript.setTrackingTargets(weaponPivot.transform, crosshair.transform);
+
+        
     }
 
     void Update()
