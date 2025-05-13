@@ -1,6 +1,7 @@
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -24,13 +25,14 @@ public class PlayerMovement : NetworkBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GetComponent<Player>();
         spriteRenderer = playerAnimator.transform.GetComponent<SpriteRenderer>();
-        SystemScript.Instance.players.Add(gameObject);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!IsOwner) return;
+        if (player.isDead) return;
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
@@ -75,4 +77,5 @@ public class PlayerMovement : NetworkBehaviour
             isMoving.Value = false;
         }
     }
+
 }

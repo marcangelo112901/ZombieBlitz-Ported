@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: augPara
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: fc4252665497cad4a9df8a44678d0aec, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 6821f005b5d970b478d0f0d807dfd6e8, type: 3}
+  weaponName: 'augPara '
+  description: 
+  damage: 210
+  firerate: 0.08
+  penetration: 1
+  reloadTime: 1.2
+  maxAmmoInClip: 30
+  ammoInClip: 30
+  maxStoredAmmo: 300
+  storedAmmo: 300
+  explosive: 0
+  stability: 3.9
+  recoil: 0.4
+  maxAngle: 5.5
+  minAngle: 3
+  ammoBoxIncrement: 120
+  shootType: 2
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.3
+  shakeAmplitude: 1.2
+  shakeFrequency: 5
+  price: 3400
+  UIDamage: 0.5
+  UIFirerate: 0.72
+  UIRecoil: 0.84
+  UIPenetration: 0.2
+  UIReloadSpeed: 0.68
+  wholeImage: {fileID: -675534811138824767, guid: 8d2f2d7168d5df449ad9bda6d287f41c, type: 3}
+  silhuetteImage: {fileID: -5442551270150404060, guid: 96981feaf052f544abc1ad518ff1678c, type: 3}

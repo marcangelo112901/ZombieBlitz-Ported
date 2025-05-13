@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: scarl
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 4e132dbbbe7ed5b47939e38d3e2248f9, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 3ea2cc4afcda6dc42aca470c5d35e3e8, type: 3}
+  weaponName: 'scarl '
+  description: 
+  damage: 575
+  firerate: 0.115
+  penetration: 3
+  reloadTime: 1.35
+  maxAmmoInClip: 25
+  ammoInClip: 25
+  maxStoredAmmo: 250
+  storedAmmo: 0
+  explosive: 0
+  stability: 9.3
+  recoil: 1.7
+  maxAngle: 13
+  minAngle: 2.5
+  ammoBoxIncrement: 100
+  shootType: 2
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.35
+  shakeAmplitude: 1
+  shakeFrequency: 4
+  price: 6500
+  UIDamage: 0.79
+  UIFirerate: 0.48
+  UIRecoil: 0.74
+  UIPenetration: 0.6
+  UIReloadSpeed: 0.58
+  wholeImage: {fileID: 4560321625325835555, guid: 97965bb301c370d43bd6672d18ebc016, type: 3}
+  silhuetteImage: {fileID: 5529662872805280013, guid: c7ca566d14b044b4b8b4433865d7f6a7, type: 3}

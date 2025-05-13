@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: aughbar
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 77be632376ac8344eab573d2bb99efa0, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 18bda2e8dccb9dd44bf2d24745a76db3, type: 3}
+  weaponName: 'aughbar '
+  description: 
+  damage: 200
+  firerate: 0.08
+  penetration: 3
+  reloadTime: 4.25
+  maxAmmoInClip: 50
+  ammoInClip: 50
+  maxStoredAmmo: 500
+  storedAmmo: 500
+  explosive: 0
+  stability: 0.8
+  recoil: 0.2
+  maxAngle: 14
+  minAngle: 6
+  ammoBoxIncrement: 200
+  shootType: 2
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.4
+  shakeAmplitude: 1.3
+  shakeFrequency: 3
+  price: 4000
+  UIDamage: 0.46
+  UIFirerate: 0.72
+  UIRecoil: 0.48
+  UIPenetration: 0.6
+  UIReloadSpeed: 0.11
+  wholeImage: {fileID: 5374994840595965488, guid: 12eabd7aae9254b468dfa3faa10e4ff5, type: 3}
+  silhuetteImage: {fileID: 8122646853187312050, guid: 84ceb2091e1d1614db5b243030978c9d, type: 3}

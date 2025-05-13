@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: msr
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 8e8afbe1932d02843bdff2dee4806416, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 3cd354bc502ae9b4788c5a6ed4fcadcc, type: 3}
+  weaponName: 'msr '
+  description: 
+  damage: 8500
+  firerate: 1.4
+  penetration: 5
+  reloadTime: 2.5
+  maxAmmoInClip: 10
+  ammoInClip: 10
+  maxStoredAmmo: 70
+  storedAmmo: 70
+  explosive: 0
+  stability: 12
+  recoil: 18
+  maxAngle: 25
+  minAngle: 1
+  ammoBoxIncrement: 30
+  shootType: 4
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.9
+  shakeAmplitude: 3.5
+  shakeFrequency: 1
+  price: 7500
+  UIDamage: 1
+  UIFirerate: 0.05
+  UIRecoil: 0.93
+  UIPenetration: 1
+  UIReloadSpeed: 0.26
+  wholeImage: {fileID: -1604115633749824462, guid: cf630274328d30246950faf27a9707e3, type: 3}
+  silhuetteImage: {fileID: 5474531258601113378, guid: 1a6c189d9e6b0b943a37b79bb302d283, type: 3}

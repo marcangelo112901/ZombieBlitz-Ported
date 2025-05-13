@@ -44,6 +44,9 @@ TagManager:
   - name: Ground
     uniqueID: 2504553097
     locked: 0
+  - name: Loot
+    uniqueID: 1087889501
+    locked: 0
   - name: Entity
     uniqueID: 1233088219
     locked: 0

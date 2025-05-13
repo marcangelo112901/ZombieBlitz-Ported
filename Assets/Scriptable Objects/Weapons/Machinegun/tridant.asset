@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: tridant
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: e46345f6d8b6b5e4ca97e171c56b9fce, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 7429bca8b00e36f499a7224e1c4adbfc, type: 3}
+  weaponName: 'tridant '
+  description: 
+  damage: 275
+  firerate: 0.06
+  penetration: 3
+  reloadTime: 4
+  maxAmmoInClip: 100
+  ammoInClip: 100
+  maxStoredAmmo: 700
+  storedAmmo: 700
+  explosive: 0
+  stability: 2.3
+  recoil: 0.3
+  maxAngle: 23
+  minAngle: 13.5
+  ammoBoxIncrement: 250
+  shootType: 2
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.4
+  shakeAmplitude: 1.3
+  shakeFrequency: 3
+  price: 7000
+  UIDamage: 0.63
+  UIFirerate: 0.96
+  UIRecoil: 0.21
+  UIPenetration: 0.6
+  UIReloadSpeed: 0.16
+  wholeImage: {fileID: 7411638482558340657, guid: 43ec757ebd35ecb45b2e443f93828577, type: 3}
+  silhuetteImage: {fileID: 393309041416540614, guid: 6954e83d600e1e44ab01039d45dc28bc, type: 3}

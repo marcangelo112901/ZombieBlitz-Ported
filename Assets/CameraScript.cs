@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 public class CameraScript : MonoBehaviour
 {
     public static CameraScript Instance { private set; get; }
-    private CinemachineCamera cCamera;
+    public CinemachineCamera cCamera;
     private CinemachineBasicMultiChannelPerlin noiseComponent;
 
     public float amplitude = 0;

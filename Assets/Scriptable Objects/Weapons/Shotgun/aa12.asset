@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: aa12
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 0a905cfa228557d4a829f4cc5a47d7e2, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: fe80cb55adfe05c4f853de516a09098f, type: 3}
+  weaponName: 'aa12 '
+  description: 
+  damage: 35
+  firerate: 0.1
+  penetration: 1
+  reloadTime: 1.3
+  maxAmmoInClip: 8
+  ammoInClip: 8
+  maxStoredAmmo: 100
+  storedAmmo: 100
+  explosive: 0
+  stability: 8
+  recoil: 6
+  maxAngle: 42
+  minAngle: 25
+  ammoBoxIncrement: 40
+  shootType: 2
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 12
+  shakeTime: 0.5
+  shakeAmplitude: 2
+  shakeFrequency: 2
+  price: 3000
+  UIDamage: 0.71
+  UIFirerate: 0.56
+  UIRecoil: 0.05
+  UIPenetration: 0.2
+  UIReloadSpeed: 0.63
+  wholeImage: {fileID: -4850257804071343546, guid: 85b4b5ff8756d2c47ad1ed0a79876929, type: 3}
+  silhuetteImage: {fileID: -1097734327499312790, guid: be2bb3b2ec12f594fb2283fed38c084f, type: 3}

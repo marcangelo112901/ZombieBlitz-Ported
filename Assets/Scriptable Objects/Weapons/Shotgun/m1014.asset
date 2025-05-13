@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: m1014
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 99306cdd5495a104788a0026ea5c9ced, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 786fe5c74fbd4a3499156a5fb0e92036, type: 3}
+  weaponName: 'm1014 '
+  description: 
+  damage: 20
+  firerate: 0.3
+  penetration: 1
+  reloadTime: 0.4
+  maxAmmoInClip: 7
+  ammoInClip: 7
+  maxStoredAmmo: 70
+  storedAmmo: 70
+  explosive: 0
+  stability: 5
+  recoil: 5
+  maxAngle: 30
+  minAngle: 12
+  ammoBoxIncrement: 28
+  shootType: 0
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 12
+  shakeTime: 0.5
+  shakeAmplitude: 2
+  shakeFrequency: 2
+  price: 1100
+  UIDamage: 0.54
+  UIFirerate: 0.28
+  UIRecoil: 0.18
+  UIPenetration: 0.2
+  UIReloadSpeed: 1
+  wholeImage: {fileID: -8863856583993677738, guid: 0131621beed282b48b3ec5a6fe5e0f99, type: 3}
+  silhuetteImage: {fileID: 6457025960939071762, guid: ea5bdc140d972be4382300e94de2d188, type: 3}

@@ -16,6 +16,10 @@ public abstract class BaseEnemy : NetworkBehaviour
     protected AudioSource audioSource;
 
     public int maxHP;
+    public float hpPerWaveIncrement = 1f;
+    public int score;
+    public float scorePerWaveIncrement = 1f;
+
     public NetworkVariable<int> currentHP = new NetworkVariable<int>(
         0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     public int damage;
@@ -26,6 +30,7 @@ public abstract class BaseEnemy : NetworkBehaviour
     public float attackSpeed;
     public float attackRange;
     public float deathTime;
+    private bool hasDropped = false;
 
     [SerializeField] protected float foreswingTimer;
     [SerializeField] protected float backswingTimer;
@@ -58,6 +63,9 @@ public abstract class BaseEnemy : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        SystemScript.Instance.enemies.Add(gameObject);
+        maxHP = (int)(maxHP * Mathf.Pow(hpPerWaveIncrement, SystemScript.Instance.waveNumber - 1));
+        score = (int)(score * Mathf.Pow(scorePerWaveIncrement, SystemScript.Instance.waveNumber - 1));
         if (!IsServer) return;
 
         currentHP.Value = maxHP;
@@ -70,15 +78,14 @@ public abstract class BaseEnemy : NetworkBehaviour
 
     private void FixedUpdate()
     {
+        spriteRenderer.flipX = flipX.Value;
+        animator.SetBool("isMoving", isMoving.Value);
+        if (!IsServer) return;
         Vector3 direction = agent.velocity.normalized;
         if (direction.x > 0f)
             flipX.Value = false;
         else if (direction.x < 0f)
             flipX.Value = true;
-
-        spriteRenderer.flipX = flipX.Value;
-        animator.SetBool("isMoving", isMoving.Value);
-        if (!IsServer) return;
         AI();
     }
 
@@ -89,12 +96,20 @@ public abstract class BaseEnemy : NetworkBehaviour
         {
             case AIState.idle:
                 targetPlayer = SearchNearestPlayer();
-                agent.SetDestination(targetPlayer.transform.position);
-                aiState = AIState.moving;
-                isMoving.Value = true;
+                if (targetPlayer != null)
+                {
+                    agent.SetDestination(targetPlayer.transform.position);
+                    aiState = AIState.moving;
+                    isMoving.Value = true;
+                }
                 break;
 
             case AIState.moving:
+                if (targetPlayer == null)
+                {
+                    aiState = AIState.idle;
+                    break;
+                }
                 float distance = Vector2.Distance(transform.position, targetPlayer.transform.position);
                 if (distance <= attackRange && attackTimer <= 0f)
                 {
@@ -109,8 +124,11 @@ public abstract class BaseEnemy : NetworkBehaviour
                 else
                 {
                     targetPlayer = SearchNearestPlayer();
-                    agent.SetDestination(targetPlayer.transform.position);
-                    isMoving.Value = true;
+                    if (targetPlayer != null)
+                    {
+                        agent.SetDestination(targetPlayer.transform.position);
+                        isMoving.Value = true;
+                    }
                 }
                 break;
 
@@ -139,11 +157,18 @@ public abstract class BaseEnemy : NetworkBehaviour
                 break;
 
             case AIState.dead:
+                if (hasDropped == false)
+                {
+                    hasDropped = true;
+                    OnDeath();
+                }
+
                 if (deathTime > 0f)
                 {
                     deathTime -= Time.deltaTime;
                     return;
                 }
+                SystemScript.Instance.enemies.Remove(gameObject);
                 GetComponent<NetworkObject>().Despawn(true);
                 break;
         }
@@ -213,6 +238,8 @@ public abstract class BaseEnemy : NetworkBehaviour
             audioSource.Play();
         }
     }
+
+    public abstract void OnDeath();
 
 }
 

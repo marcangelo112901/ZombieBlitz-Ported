@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: ak47
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 66ca9106286ffb548b25111e02843fe9, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 2fed1370cf53f2248a33aa68658db200, type: 3}
+  weaponName: 'ak47 '
+  description: 
+  damage: 180
+  firerate: 0.11
+  penetration: 2
+  reloadTime: 1.6
+  maxAmmoInClip: 30
+  ammoInClip: 30
+  maxStoredAmmo: 300
+  storedAmmo: 300
+  explosive: 0
+  stability: 14
+  recoil: 2.1
+  maxAngle: 15
+  minAngle: 8
+  ammoBoxIncrement: 120
+  shootType: 2
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.35
+  shakeAmplitude: 1
+  shakeFrequency: 4
+  price: 2700
+  UIDamage: 0.38
+  UIFirerate: 0.52
+  UIRecoil: 0.31
+  UIPenetration: 0.4
+  UIReloadSpeed: 0.42
+  wholeImage: {fileID: 2395156023537675963, guid: 16a086f6c909ce54189499a46454e091, type: 3}
+  silhuetteImage: {fileID: 2479994051355209481, guid: 57924a2da37aaca49a3a51f60e2e71ee, type: 3}

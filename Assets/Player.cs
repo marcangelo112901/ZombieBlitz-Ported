@@ -1,12 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.IO.IsolatedStorage;
-using NUnit.Framework;
 using Unity.Netcode;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.Rendering.UI;
 
 public class Player : NetworkBehaviour
 {
@@ -22,7 +16,8 @@ public class Player : NetworkBehaviour
     public GameObject crosshair;
     public GameObject weaponPivot;
     public float crosshairDistance = 2;
-    public WeaponObject[] weapons;
+    public WeaponObject[] weapons = new WeaponObject[3];
+    public int coins;
 
     public float reloadTimer;
     public bool isReloading = false;
@@ -33,8 +28,17 @@ public class Player : NetworkBehaviour
     public bool isShooting = false;
     public Vector2 mousePosition;
     public float recoilAngle;
+    public bool isDead = false;
+    public float deathTimer = 5f;
 
     [SerializeField] private AudioClip[] hitSounds;
+    [SerializeField] private AudioClip getCoinSound;
+    [SerializeField] private AudioClip replenishAmmoSound;
+    [SerializeField] private AudioClip equipSound;
+    [SerializeField] private AudioClip[] reloadSounds;
+    [HideInInspector]
+    public NetworkVariable<bool> UIOpened = new NetworkVariable<bool>(
+        false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     public NetworkVariable<float> mouseAngle = new NetworkVariable<float>(
         default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
@@ -56,6 +60,9 @@ public class Player : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        Debug.Log(SystemScript.Instance);
+        weapons[0] = SystemScript.Instance.GetClonedWeaponByName(weapons[0].weaponName);
+        SystemScript.Instance.players.Add(gameObject);
         if (IsServer)
             currentHP.Value = maxHP;
 
@@ -66,11 +73,16 @@ public class Player : NetworkBehaviour
             Destroy(crosshair);
             return;
         }
+        ShopScript.player = this;
+        GameUIScript.player = this;
+        SystemScript.player = this;
+
         cameraScript.setTrackingTargets(weaponPivot.transform, crosshair.transform);
     }
 
     void Update()
     {
+
         if (IsServer)
         {
             if (regenTimer > 0f)
@@ -88,6 +100,7 @@ public class Player : NetworkBehaviour
             }
         }
 
+        CheckWindowKey();
         RecoilUpdate();
         clickUpdate();
         weaponIndexCheck();
@@ -125,58 +138,81 @@ public class Player : NetworkBehaviour
     {
         currentWeapon = weapons[weaponIndex.Value];
 
+        if (!IsOwner) return;
         if (isFiring.Value && shootTimer <= 0f && burstDelay <= 0f)
             isShooting = true;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void SpawnBulletServerRpc(float[] angles)
+    {
+        SpawnBulletClientRpc(angles);
     }
 
     [ClientRpc]
     private void SpawnBulletClientRpc(float[] angles)
     {
+        audioManager.playClip(_currentWeapon.shootClip);
+        weapon.shoot();
         for (int i = 0; i < angles.Length; i++)
         {
             BulletScript bullet = Instantiate(_currentWeapon.bulletObject, transform.position, Quaternion.identity).GetComponent<BulletScript>();
             bullet.damage = _currentWeapon.damage;
             bullet.penetration = _currentWeapon.penetration;
             bullet.angle = angles[i];
+            bullet.explosive = _currentWeapon.explosive;
             bullet.player = this;
         }
     }
 
     private void shootUpdate()
     {
+        if (!IsOwner) return;
         if (_currentWeapon.ammoInClip <= 0)
         {
-            initiateReload();
-            return;
-        }
+            if (weaponIndex.Value == 2 && _currentWeapon.storedAmmo <= 0)
+            {
+                weapons[2] = null;
 
-        if (burstCount == 0)
+                if (weapons[1] != null)
+                    weaponIndex.Value = 1;
+                else
+                    weaponIndex.Value = 0;
+                isShooting = false;
+            }
+            else if (_currentWeapon.storedAmmo > 0)
+                initiateReload();
+            else
+                isShooting = false;
+        }
+        else
         {
-            isShooting = false;
-            burstDelay = _currentWeapon.burstDelay;
-            burstCount = _currentWeapon.burstCount;
-            return;
+
+            if (burstCount == 0)
+            {
+                isShooting = false;
+                burstDelay = _currentWeapon.burstDelay;
+                burstCount = _currentWeapon.burstCount;
+                return;
+            }
+
+
+            if (shootTimer > 0f || burstDelay > 0f) return;
+
+            burstCount--;
+
+            _currentWeapon.ammoInClip--;
+
+            List<float> selectedAngles = new List<float>();
+            for (int i = 0; i < _currentWeapon.bulletCount; i++)
+                selectedAngles.Add(mouseAngle.Value + (Random.Range(-recoilAngle, recoilAngle) / 2));
+
+            SpawnBulletServerRpc(selectedAngles.ToArray());
+            recoilAngle = Mathf.Clamp(recoilAngle + _currentWeapon.recoil, _currentWeapon.minAngle, _currentWeapon.maxAngle);
+            CameraScript.Instance.shakeCamera(_currentWeapon.shakeTime, _currentWeapon.shakeAmplitude, _currentWeapon.shakeFrequency);
+
+            shootTimer = _currentWeapon.firerate;
         }
-
-
-        if (shootTimer > 0f || burstDelay > 0f) return;
-
-        burstCount--;
-        _currentWeapon.ammoInClip--;
-
-        List<float> selectedAngles = new List<float>();
-        for (int i = 0; i < _currentWeapon.bulletCount; i++)
-            selectedAngles.Add(mouseAngle.Value + (Random.Range(-recoilAngle, recoilAngle) / 2));
-
-        SpawnBulletClientRpc(selectedAngles.ToArray());
-        recoilAngle = Mathf.Clamp(recoilAngle + _currentWeapon.recoil, _currentWeapon.minAngle, _currentWeapon.maxAngle);
-        CameraScript.Instance.shakeCamera(_currentWeapon.shakeTime, _currentWeapon.shakeAmplitude, _currentWeapon.shakeFrequency);
-
-        weapon.shoot();
-        shootTimer = _currentWeapon.firerate;
-
-
-      
 
     }
 
@@ -184,12 +220,19 @@ public class Player : NetworkBehaviour
     {
         if (!IsOwner) return;
 
-        if (Input.GetMouseButtonDown(0))
+        if (weaponPivot.activeSelf == false)
         {
+            isFiring.Value = false;
+            return;
+        }
+
+        if (SystemScript.Instance.isShooting == true)
+        {
+            if (UIOpened.Value) return;
             isFiring.Value = true;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (SystemScript.Instance.isShooting == false)
         {
             isFiring.Value = false;
         }
@@ -197,6 +240,7 @@ public class Player : NetworkBehaviour
 
     private void angleUpdate()
     {
+        if (UIOpened.Value) return;
         if (mouseAngle.Value < 90 || mouseAngle.Value > 270)
             weaponPivot.transform.rotation = Quaternion.Euler(0, 0, mouseAngle.Value);
         else
@@ -213,6 +257,7 @@ public class Player : NetworkBehaviour
         if (mouseAngle.Value < 0) mouseAngle.Value += 360f;
 
         mousePosition = Camera.main.ScreenToWorldPoint(mousePos);
+
         crosshair.transform.position = mousePosition;
     }
 
@@ -220,6 +265,7 @@ public class Player : NetworkBehaviour
     {
         if (reloadTimer <= 0f && isReloading == false)
         {
+            SystemScript.Instance.PlaySystemSound(reloadSounds[0]);
             reloadTimer = _currentWeapon.reloadTime;
             isReloading = true;
         }
@@ -227,22 +273,26 @@ public class Player : NetworkBehaviour
 
     private void reloadUpdate()
     {
-        if (reloadTimer > 0f)
+        if (IsOwner)
         {
-            reloadTimer -= Time.deltaTime;
-            return;
-        }
+            if (reloadTimer > 0f)
+            {
+                reloadTimer -= Time.deltaTime;
+                return;
+            }
 
-        isReloading = false;
-        if (_currentWeapon.storedAmmo >= _currentWeapon.maxAmmoInClip)
-        {
-            _currentWeapon.ammoInClip = _currentWeapon.maxAmmoInClip;
-            _currentWeapon.storedAmmo -= _currentWeapon.maxAmmoInClip;
-        }
-        else if (_currentWeapon.storedAmmo < _currentWeapon.maxAmmoInClip)
-        {
-            _currentWeapon.ammoInClip = _currentWeapon.storedAmmo;
-            _currentWeapon.storedAmmo = 0;
+            SystemScript.Instance.PlaySystemSound(reloadSounds[1]);
+            isReloading = false;
+            if (_currentWeapon.storedAmmo >= _currentWeapon.maxAmmoInClip)
+            {
+                _currentWeapon.ammoInClip = _currentWeapon.maxAmmoInClip;
+                _currentWeapon.storedAmmo -= _currentWeapon.maxAmmoInClip;
+            }
+            else if (_currentWeapon.storedAmmo < _currentWeapon.maxAmmoInClip)
+            {
+                _currentWeapon.ammoInClip = _currentWeapon.storedAmmo;
+                _currentWeapon.storedAmmo = 0;
+            }
         }
     }
 
@@ -267,22 +317,31 @@ public class Player : NetworkBehaviour
                 burstCount = _currentWeapon.burstCount;
             }
         }
+        get
+        {
+            return _currentWeapon;
+        }
     }
 
 
     public void weaponIndexCheck()
     {
         if (!IsOwner) return;
+        if (UIOpened.Value) return;
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
+            weaponIndex.Value = 0;
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && weapons[1] != null)
             weaponIndex.Value = 1;
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && weapons[2] != null)
             weaponIndex.Value = 2;
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-            weaponIndex.Value = 3;
+
+        if (Input.GetKeyDown(KeyCode.R))
+            if (_currentWeapon.ammoInClip < _currentWeapon.maxAmmoInClip)
+                initiateReload();
     }
 
-    public void DealDamage(int damage)
+    public void DealDamage(int damage) // Called in server
     {
         if (damage >= currentHP.Value)
             Dead();
@@ -299,6 +358,127 @@ public class Player : NetworkBehaviour
 
     private void Dead()
     {
+        if (isDead == false)
+        {
+            healAccumulator = 0f;
+            regenTimer = float.PositiveInfinity;
+            currentHP.Value = 0;
+            DeadClientRpc();
+        }
+    }
+
+    [ClientRpc]
+    public void DeadClientRpc()
+    {
+        isDead = true;
+        SystemScript.Instance.players.Remove(gameObject);
+        weaponPivot.SetActive(false);
+        GetComponent<PlayerMovement>().playerAnimator.SetTrigger("death");
+        if (SystemScript.Instance.players.Count == 0)
+            GameOver();
+
+        if (IsOwner)
+        {
+            crosshair.SetActive(false);
+            Destroy(GetComponent<AudioListener>());
+            CameraScript.Instance.cCamera.Follow = null;
+            CameraScript.Instance.gameObject.AddComponent<AudioListener>();
+        }
+    }
+
+    private void GameOver()
+    {
+        Cursor.visible = true;
+        SystemScript system = SystemScript.Instance;
+        system.gameoverAnimation.Play("Gameover Animation");
+        system.ScoreTMP.text = "SCORE: " + system.score + "   WAVE: " + system.waveNumber;
+        system.musicSource.Stop();
+        system.audioManager.playClip(system.GameoverClips[0]);
+        StartCoroutine(system.DelayedSound());
+    }
+
+    [ClientRpc]
+    public void ReplenishBulletClientRpc(ClientRpcParams clientRpcParams = default)
+    {
+        if (weapons[1] != null)
+            weapons[1].storedAmmo = Mathf.Clamp(weapons[1].storedAmmo + weapons[1].ammoBoxIncrement, 0, weapons[1].maxStoredAmmo);
+
+        if (IsOwner)
+            SystemScript.Instance.PlaySystemSound(replenishAmmoSound);
+    }
+
+    [ClientRpc]
+    public void AddCoinsClientRpc(int amount, ClientRpcParams clientRpcParams = default)
+    {
+        SystemScript.Instance.PlaySystemSound(getCoinSound);
+        coins += amount;
+    }
+    
+    [ClientRpc]
+    public void EquipWeaponClientRpc(int weaponID, int index)
+    {
+        SystemScript system = SystemScript.Instance;
+        weapons[index] = Instantiate(system.GetWeaponObject(weaponID));
+        if (IsOwner)
+            SystemScript.Instance.PlaySystemSound(equipSound);
+    }
+
+    [ServerRpc]
+    public void EquipWeaponServerRpc(int weaponID, int index)
+    {
+        EquipWeaponClientRpc(weaponID, index);
+    }
+
+    public void ExitWindowSetActive(bool boolean)
+    {
+        if (boolean)
+        {
+            UIOpened.Value = true;
+            SystemScript.Instance.ExitWindow.SetActive(true);
+            Cursor.visible = true;
+        }
+        else
+        {
+            UIOpened.Value = false;
+            SystemScript.Instance.ExitWindow.SetActive(false);
+            Cursor.visible = false;
+        }
+    }
+
+    public void ShopWindowSetActive(bool boolean)
+    {
+        if (boolean)
+        {
+            UIOpened.Value = true;
+            SystemScript.Instance.ShopWindow.SetActive(true);
+            Cursor.visible = true;
+        }
+        else
+        {
+            UIOpened.Value = false;
+            SystemScript.Instance.ShopWindow.SetActive(false);
+            Cursor.visible = false;
+        }
+    }
+
+    private void CheckWindowKey()
+    {
+        if (!IsOwner) return;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (UIOpened.Value)
+            {
+                ExitWindowSetActive(false);
+                ShopWindowSetActive(false);
+            }
+            else
+            {
+                ExitWindowSetActive(true);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.B) && !UIOpened.Value)
+            ShopWindowSetActive(true);
 
     }
 }

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: m4a1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 9bc85582df96cfd4f8ac0a1f847d2119, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 9985fd76a4a049b4daf91199a822e94c, type: 3}
+  weaponName: 'm4a1 '
+  description: 
+  damage: 40
+  firerate: 0.088
+  penetration: 2
+  reloadTime: 1.5
+  maxAmmoInClip: 30
+  ammoInClip: 30
+  maxStoredAmmo: 300
+  storedAmmo: 300
+  explosive: 0
+  stability: 10.4
+  recoil: 1.2
+  maxAngle: 8
+  minAngle: 2.5
+  ammoBoxIncrement: 120
+  shootType: 2
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.35
+  shakeAmplitude: 1
+  shakeFrequency: 4
+  price: 800
+  UIDamage: 0.17
+  UIFirerate: 0.68
+  UIRecoil: 0.8
+  UIPenetration: 0.4
+  UIReloadSpeed: 0.47
+  wholeImage: {fileID: -9062628963391004874, guid: afc997c90391ff44cae3524c647ca261, type: 3}
+  silhuetteImage: {fileID: -6523142373678959762, guid: d92994900a929df4583e9ba8c0e2f06a, type: 3}

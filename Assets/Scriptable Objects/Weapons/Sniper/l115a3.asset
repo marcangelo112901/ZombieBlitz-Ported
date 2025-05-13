@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: l115a3
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: c5670f7473f4c1a4c88dea73e6cfe59f, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 76ef5968fc12b9b48b2ea83ca19cbe8d, type: 3}
+  weaponName: 'l115a3 '
+  description: 
+  damage: 3000
+  firerate: 1.2
+  penetration: 4
+  reloadTime: 1.8
+  maxAmmoInClip: 5
+  ammoInClip: 5
+  maxStoredAmmo: 40
+  storedAmmo: 40
+  explosive: 0
+  stability: 8.5
+  recoil: 11
+  maxAngle: 25
+  minAngle: 1
+  ammoBoxIncrement: 15
+  shootType: 4
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.9
+  shakeAmplitude: 3.5
+  shakeFrequency: 1
+  price: 4500
+  UIDamage: 0.96
+  UIFirerate: 0.08
+  UIRecoil: 0.97
+  UIPenetration: 0.8
+  UIReloadSpeed: 0.32
+  wholeImage: {fileID: -3809672527559622150, guid: 847a0b6ea9cd0fd4abc70af73237967c, type: 3}
+  silhuetteImage: {fileID: 2016357555550708486, guid: aa2d5944174db794881bf6e35c924a3d, type: 3}

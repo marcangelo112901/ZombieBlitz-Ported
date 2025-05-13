@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: spas12
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 3f96046f2fd86564483752c63640cc66, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: cfdaa56bbc3249643badf8831a95db3a, type: 3}
+  weaponName: 'spas12 '
+  description: 
+  damage: 35
+  firerate: 0.3
+  penetration: 1
+  reloadTime: 0.5
+  maxAmmoInClip: 8
+  ammoInClip: 8
+  maxStoredAmmo: 80
+  storedAmmo: 80
+  explosive: 0
+  stability: 8
+  recoil: 7
+  maxAngle: 38
+  minAngle: 14
+  ammoBoxIncrement: 32
+  shootType: 0
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 12
+  shakeTime: 0.5
+  shakeAmplitude: 2
+  shakeFrequency: 2
+  price: 1800
+  UIDamage: 0.71
+  UIFirerate: 0.28
+  UIRecoil: 0.12
+  UIPenetration: 0.2
+  UIReloadSpeed: 0.89
+  wholeImage: {fileID: -2209544487691336024, guid: 2834e1026dd7632478c7342956b9ef8e, type: 3}
+  silhuetteImage: {fileID: -6845265108773105651, guid: b7d1ccea83964c44999121926b1e13ae, type: 3}

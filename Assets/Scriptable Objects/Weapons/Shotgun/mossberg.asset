@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: mossberg
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 8c2efbd1934d30a45895991a60522141, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 84023648ba65be2449ef4355f071141a, type: 3}
+  weaponName: mossberg
+  description: 
+  damage: 45
+  firerate: 1.1
+  penetration: 1
+  reloadTime: 0.45
+  maxAmmoInClip: 6
+  ammoInClip: 6
+  maxStoredAmmo: 60
+  storedAmmo: 60
+  explosive: 0
+  stability: 3.2
+  recoil: 6
+  maxAngle: 35
+  minAngle: 15
+  ammoBoxIncrement: 24
+  shootType: 3
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 12
+  shakeTime: 0.5
+  shakeAmplitude: 2
+  shakeFrequency: 2
+  price: 600
+  UIDamage: 0.75
+  UIFirerate: 0.12
+  UIRecoil: 0.15
+  UIPenetration: 0.2
+  UIReloadSpeed: 0.95
+  wholeImage: {fileID: -2030585159243576246, guid: d9cb5b3d8783a884baca1be0a215578d, type: 3}
+  silhuetteImage: {fileID: 6230052657110381263, guid: 9e09a5891068f35408ae732501712125, type: 3}

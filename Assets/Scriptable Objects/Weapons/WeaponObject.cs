@@ -5,8 +5,11 @@ public class WeaponObject : ScriptableObject
 {
     public GameObject prefab;
     public GameObject bulletObject;
+    public AudioClip shootClip;
 
     [Header("Weapon Attributes")]
+    public string weaponName;
+    public string description;
     public int damage;
     public float firerate;
     public int penetration;
@@ -17,6 +20,8 @@ public class WeaponObject : ScriptableObject
     public int maxStoredAmmo;
     public int storedAmmo;
 
+    public bool explosive;
+
     [Header("Weapon Bullet Spread")]
     public float stability;
     public float recoil;
@@ -26,19 +31,33 @@ public class WeaponObject : ScriptableObject
 
     [Header("Weapon Properties")]
     public ShootType shootType;
-    public int burstCount;
+    public int burstCount = 1;
     public float burstDelay;
-    public int bulletCount;
+    public int bulletCount = 1;
 
     [Header("Screen Shake")]
     public float shakeTime;
     public float shakeAmplitude;
     public float shakeFrequency;
+
+    public int price;
+
+    [Header("UI Variables")]
+    public float UIDamage;
+    public float UIFirerate;
+    public float UIRecoil;
+    public float UIPenetration;
+    public float UIReloadSpeed;
+
+    public Sprite wholeImage;
+    public Sprite silhuetteImage;
 }
 
 public enum ShootType
 {
     Semi_Auto,
     Burst,
-    Full_Auto
+    Full_Auto,
+    Pump_Action,
+    Bolt_Action
 }

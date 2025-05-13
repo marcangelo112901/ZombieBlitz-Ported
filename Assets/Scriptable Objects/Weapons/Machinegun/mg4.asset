@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: mg4
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: eb94bf728afa6be4798a64f544368536, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: fc0a4cb3ed90f2a42aaf1e70e20af14d, type: 3}
+  weaponName: 'mg4 '
+  description: 
+  damage: 35
+  firerate: 0.08
+  penetration: 2
+  reloadTime: 5
+  maxAmmoInClip: 100
+  ammoInClip: 100
+  maxStoredAmmo: 700
+  storedAmmo: 700
+  explosive: 0
+  stability: 1.9
+  recoil: 0.3
+  maxAngle: 18
+  minAngle: 11
+  ammoBoxIncrement: 200
+  shootType: 2
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.4
+  shakeAmplitude: 1.3
+  shakeFrequency: 3
+  price: 700
+  UIDamage: 0.08
+  UIFirerate: 0.72
+  UIRecoil: 0.28
+  UIPenetration: 0.4
+  UIReloadSpeed: 0.05
+  wholeImage: {fileID: -6945829233036197073, guid: 766041a357ed5d64d9512bdd99b4ea40, type: 3}
+  silhuetteImage: {fileID: 6703865585256929659, guid: 3aa5ef2f4fcd81443bc83f7390424da3, type: 3}

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe430c266773b74f97d17925357cf09, type: 3}
+  m_Name: m40a3
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2192323738703792408, guid: 2ca60148114bea74e9084e127b88ee47, type: 3}
+  bulletObject: {fileID: 9194902688498673202, guid: bf263e3f81c5356429b7c145c778383a, type: 3}
+  shootClip: {fileID: 8300000, guid: 38b48a9f36a70c640801d17280e6f538, type: 3}
+  weaponName: 'm40a3 '
+  description: 
+  damage: 1300
+  firerate: 0.95
+  penetration: 3
+  reloadTime: 0.4
+  maxAmmoInClip: 5
+  ammoInClip: 5
+  maxStoredAmmo: 40
+  storedAmmo: 40
+  explosive: 0
+  stability: 6.8
+  recoil: 7
+  maxAngle: 13
+  minAngle: 1
+  ammoBoxIncrement: 15
+  shootType: 4
+  burstCount: 1
+  burstDelay: 0
+  bulletCount: 1
+  shakeTime: 0.8
+  shakeAmplitude: 3
+  shakeFrequency: 1
+  price: 1600
+  UIDamage: 0.92
+  UIFirerate: 0.16
+  UIRecoil: 1
+  UIPenetration: 0.6
+  UIReloadSpeed: 1
+  wholeImage: {fileID: 2907193171056164946, guid: 25613d9e667ae914e91f48327491e404, type: 3}
+  silhuetteImage: {fileID: -5942402720386716662, guid: 65dfd3c7f0deea44b9de61a79b4ff1c3, type: 3}
