@@ -23,7 +23,7 @@ public class RangeZombie : BaseEnemy
     [ClientRpc]
     private void UpdateScoreClientRpc()
     {
-        SystemScript.Instance.score += score;
+        SystemScript.Instance.score += score.Value;
     }
 
     protected override void Attack() // server called function

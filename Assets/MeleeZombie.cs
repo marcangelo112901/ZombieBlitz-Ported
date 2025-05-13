@@ -29,6 +29,6 @@ public class MeleeZombie : BaseEnemy
     [ClientRpc]
     private void UpdateScoreClientRpc()
     {
-        SystemScript.Instance.score += score;
+        SystemScript.Instance.score += score.Value;
     }
 }

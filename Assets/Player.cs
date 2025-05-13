@@ -373,19 +373,19 @@ public class Player : NetworkBehaviour
             healAccumulator = 0f;
             regenTimer = float.PositiveInfinity;
             currentHP.Value = 0;
-            DeadClientRpc();
+            DeadClientRpc(SystemScript.Instance.waveNumber);
         }
     }
 
     [ClientRpc]
-    public void DeadClientRpc()
+    public void DeadClientRpc(int waveNumber)
     {
         isDead = true;
         SystemScript.Instance.players.Remove(gameObject);
         weaponPivot.SetActive(false);
         GetComponent<PlayerMovement>().playerAnimator.SetTrigger("death");
         if (SystemScript.Instance.players.Count == 0)
-            GameOver();
+            GameOver(waveNumber);
 
         if (IsOwner)
         {
@@ -396,10 +396,11 @@ public class Player : NetworkBehaviour
         }
     }
 
-    private void GameOver()
+    private void GameOver(int waveNumber)
     {
         Cursor.visible = true;
         SystemScript system = SystemScript.Instance;
+        system.waveNumber = waveNumber;
         system.gameoverAnimation.Play("Gameover Animation");
         system.ScoreTMP.text = "SCORE: " + system.score + "   WAVE: " + system.waveNumber;
         system.musicSource.Stop();

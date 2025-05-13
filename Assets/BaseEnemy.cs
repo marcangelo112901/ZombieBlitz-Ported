@@ -10,16 +10,23 @@ public abstract class BaseEnemy : NetworkBehaviour
 {
     protected NavMeshAgent agent;
     [SerializeField] protected Animator animator;
+    [SerializeField] protected Canvas canvas;
+    [SerializeField] protected BrokenProgressBar bar;
     protected SpriteRenderer spriteRenderer;
     protected NetworkAnimator networkAnimator;
     protected CircleCollider2D[] colliders;
     protected AudioSource audioSource;
 
     public int maxHP;
+    public int prevHP;
+    public int baseScore;
     public float hpPerWaveIncrement = 1f;
-    public int score;
     public float scorePerWaveIncrement = 1f;
 
+    public NetworkVariable<int> score = new NetworkVariable<int>(
+        0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+
+    public int localMaxHP;
     public NetworkVariable<int> currentHP = new NetworkVariable<int>(
         0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     public int damage;
@@ -30,6 +37,7 @@ public abstract class BaseEnemy : NetworkBehaviour
     public float attackSpeed;
     public float attackRange;
     public float deathTime;
+    public float HPBarTimer;
     private bool hasDropped = false;
 
     [SerializeField] protected float foreswingTimer;
@@ -59,14 +67,16 @@ public abstract class BaseEnemy : NetworkBehaviour
         colliders = GetComponents<CircleCollider2D>();
         audioSource = GetComponent<AudioSource>();
         agent.speed = movementSpeed;
+        canvas.worldCamera = Camera.main;
     }
 
     public override void OnNetworkSpawn()
     {
         SystemScript.Instance.enemies.Add(gameObject);
         maxHP = (int)(maxHP * Mathf.Pow(hpPerWaveIncrement, SystemScript.Instance.waveNumber - 1));
-        score = (int)(score * Mathf.Pow(scorePerWaveIncrement, SystemScript.Instance.waveNumber - 1));
+        baseScore = (int)(baseScore * Mathf.Pow(scorePerWaveIncrement, SystemScript.Instance.waveNumber - 1));
         if (!IsServer) return;
+        score.Value = baseScore;
 
         currentHP.Value = maxHP;
     }
@@ -78,6 +88,7 @@ public abstract class BaseEnemy : NetworkBehaviour
 
     private void FixedUpdate()
     {
+        ShowHealthBar();
         spriteRenderer.flipX = flipX.Value;
         animator.SetBool("isMoving", isMoving.Value);
         if (!IsServer) return;
@@ -202,6 +213,7 @@ public abstract class BaseEnemy : NetworkBehaviour
     {
         if (damage >= currentHP.Value)
         {
+            currentHP.Value = 0;
             RemoveCollidersClientRpc();
             networkAnimator.SetTrigger("Death");
             agent.ResetPath();
@@ -240,6 +252,28 @@ public abstract class BaseEnemy : NetworkBehaviour
     }
 
     public abstract void OnDeath();
+
+    public void ShowHealthBar()
+    {
+        if (currentHP.Value > localMaxHP)
+        {
+            localMaxHP = currentHP.Value;
+            prevHP = currentHP.Value;
+        }
+
+        if (HPBarTimer > 0f)
+        {
+            HPBarTimer -= Time.deltaTime;
+            canvas.gameObject.SetActive(true);
+            bar.currentValue = (float)currentHP.Value / (float)localMaxHP;
+        }
+        else
+            canvas.gameObject.SetActive(false);
+
+        if (prevHP == currentHP.Value) return;
+        prevHP = currentHP.Value;
+        HPBarTimer = 5f;
+    }
 
 }
 
