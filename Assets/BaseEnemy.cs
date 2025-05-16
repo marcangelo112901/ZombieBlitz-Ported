@@ -179,7 +179,6 @@ public abstract class BaseEnemy : NetworkBehaviour
                     deathTime -= Time.deltaTime;
                     return;
                 }
-                SystemScript.Instance.enemies.Remove(gameObject);
                 GetComponent<NetworkObject>().Despawn(true);
                 break;
         }
@@ -229,6 +228,7 @@ public abstract class BaseEnemy : NetworkBehaviour
     public void RemoveCollidersClientRpc()
     {
         PlaySound("death");
+        SystemScript.Instance.enemies.Remove(gameObject);
         foreach (CircleCollider2D collider in colliders)
             collider.enabled = false;
     }

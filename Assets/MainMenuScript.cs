@@ -237,6 +237,11 @@ public class MainMenuScript : NetworkBehaviour
     {
         Application.Quit();
     }
+
+    public void DisconnectNetwork()
+    {
+        network.Shutdown();
+    }
 }
 
 [System.Serializable]

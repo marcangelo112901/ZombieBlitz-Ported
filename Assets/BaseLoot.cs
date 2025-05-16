@@ -22,8 +22,10 @@ public abstract class BaseLoot : NetworkBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!IsServer || !NetworkObject.IsSpawned) return;
+        if (!IsServer || !IsSpawned) return;
+
         collision.gameObject.TryGetComponent(out Player player);
+
         if (player == null) return;
 
         ulong targetClientId = player.OwnerClientId;
@@ -41,4 +43,5 @@ public abstract class BaseLoot : NetworkBehaviour
     }
 
     public abstract void OnLoot(Player player, ClientRpcParams rpcParams);
+
 }

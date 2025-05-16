@@ -149,5 +149,10 @@ public class SystemScript : MonoBehaviour
     {
         player.ExitWindowSetActive(false);
     }
+
+    public void CloseShopUI()
+    {
+        player.ShopWindowSetActive(false);
+    }
 }
 
