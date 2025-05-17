@@ -2,6 +2,7 @@ using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Tilemaps;
 using static Unity.Collections.Unicode;
 
 public class WaveSystemScript : MonoBehaviour
@@ -9,7 +10,7 @@ public class WaveSystemScript : MonoBehaviour
     private NetworkManager networkManager;
     private SystemScript system;
 
-    [SerializeField] private SpriteRenderer maxSprite;
+    [SerializeField] private TilemapRenderer maxSprite;
     [SerializeField] private GameObject normalZombie;
     [SerializeField] private GameObject throwerZombie;
     [SerializeField] private GameObject fastZombie;
@@ -51,7 +52,7 @@ public class WaveSystemScript : MonoBehaviour
         {
             spawnTimer = Random.Range(2f, 6f) * 1f;
 
-            int chance = Random.Range(3, 6) + (int)Mathf.Floor(system.waveNumber / 5);
+            int chance = Random.Range(3, 6 + Mathf.Clamp(system.players.Count - 2, 0, int.MaxValue) + (int)Mathf.Floor(system.waveNumber / 5));
             for (int i = 0; i < chance; i++)
             {
                 SpawnRandomZombie();
@@ -94,7 +95,7 @@ public class WaveSystemScript : MonoBehaviour
         while (attempts < 100)
         {
             chosenLocation = new Vector2(Random.Range(minBounds.x, maxBounds.x), Random.Range(minBounds.y, maxBounds.y));
-            if (NavMesh.SamplePosition(chosenLocation, out NavMeshHit hit, 50f, NavMesh.AllAreas))
+            if (NavMesh.SamplePosition(chosenLocation, out NavMeshHit hit, 200f, NavMesh.AllAreas))
             {
                 chosenLocation = hit.position;
             }

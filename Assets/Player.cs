@@ -110,6 +110,7 @@ public class Player : NetworkBehaviour
             }
         }
 
+        SendWaveDetails();
         CheckWindowKey();
         RecoilUpdate();
         clickUpdate();
@@ -418,8 +419,7 @@ public class Player : NetworkBehaviour
             SystemScript.Instance.PlaySystemSound(replenishAmmoSound);
     }
 
-    [ClientRpc]
-    public void AddCoinsClientRpc(int amount, ClientRpcParams clientRpcParams = default)
+    public void AddCoins(int amount)
     {
         SystemScript.Instance.PlaySystemSound(getCoinSound);
         coins += amount;
@@ -491,5 +491,25 @@ public class Player : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.B) && !UIOpened.Value)
             ShopWindowSetActive(true);
 
+    }
+
+    private float SendDelay = 5f;
+    private void SendWaveDetails()
+    {
+        if (!IsServer) return;
+        if (SendDelay > 0f)
+        {
+            SendDelay -= Time.deltaTime;
+            return;
+        }
+
+        SendWaveDetailsClientRpc(SystemScript.Instance.waveNumber);
+    }
+
+
+    [ClientRpc]
+    private void SendWaveDetailsClientRpc(int waveNumber)
+    {
+        SystemScript.Instance.waveNumber = waveNumber;
     }
 }

@@ -6,7 +6,7 @@ public class FastZombie : BaseEnemy
     public override void OnDeath()
     {
         int chance = Random.Range(0, 100);
-        if (chance < 40)
+        if (chance < 45)
         {
             GameObject loot = SystemScript.Instance.lootSystem.GetLoot(LootType.rare);
             GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity, null);

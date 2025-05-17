@@ -24,7 +24,7 @@ MonoBehaviour:
   maxAmmoInClip: 25
   ammoInClip: 25
   maxStoredAmmo: 250
-  storedAmmo: 0
+  storedAmmo: 250
   explosive: 0
   stability: 9.3
   recoil: 1.7

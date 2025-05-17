@@ -166,3 +166,5 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   coinValueMin: 75
   coinValueMax: 250
+  coinShareRatio: 0.3
+  coinRatioPenaltyPerPlayer: 0.03
