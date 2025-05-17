@@ -3889,8 +3889,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t1. Legendary Weapon: SMAW now explodes and deals damage when used by
-    a \n\t\tclient player.\n\t2. The SCAR-L weapon now has an initial bullet."
+  m_text: "\t1. Super Weapon: SMAW now explodes and deals damage when used by a \n\t\tclient
+    player.\n\t2. The SCAR-L weapon now has an initial bullet."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5171,14 +5171,14 @@ MonoBehaviour:
   m_text: "We\u2019ve heard your feedback about the late-game difficulty in multiplayer!
     Coins being split among players made progression tough, so we\u2019re tweaking
     the system: now, even players who didn\u2019t loot a coin will still get a smaller
-    share. To balance things out, enemies will drop items more often, but their spawn
-    size and how much each player gets from coin drops will scale based on how many
-    players are in the lobby. More chaos, more strategy. \n\n\t[+] Multiplayer: All
-    players (except the looter) gets a 30% base share\n\t[*] Item drop rate to all
-    zombies slightly increased:\n\t\t- Normal Zombie: <s>50%</s> -> 60%\n\t\t- Thrower
-    Zombie: <s>40%</s> -> 50%\n\t\t- Fast Zombie: <s>40%</s> -> 45%\n\t[*] Lobby
-    size difficulty scaling (only scales if beyond 2 players):\n\t\t- +1 max zombie
-    spawn size per player.\n\t\t- -3% coin share per player."
+    share. Enemies now have a higher chance to drop items. To balance things out,
+    both enemy spawn count and coin share ratio will scale with the number of players
+    in the lobby. More players, more chaos, more strategy. \n\n\t[+] Multiplayer:
+    All players (except the looter) gets a 30% base share\n\t[*] Item drop rate to
+    all zombies slightly increased:\n\t\t- Normal Zombie: <s>50%</s> -> 60%\n\t\t-
+    Thrower Zombie: <s>40%</s> -> 50%\n\t\t- Fast Zombie: <s>40%</s> -> 45%\n\t[*]
+    Lobby size difficulty scaling (only scales if beyond 2 players):\n\t\t- +1 max
+    zombie spawn size per player.\n\t\t- -3% coin share per player."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6157,7 +6157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -59.581627}
+  m_AnchoredPosition: {x: 0, y: -59.581635}
   m_SizeDelta: {x: 0, y: 126.84003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265485183
